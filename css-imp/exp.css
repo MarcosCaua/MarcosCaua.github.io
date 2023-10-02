@@ -1,0 +1,215 @@
+#experiencia {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 120px;
+  padding-bottom: 100px;
+}
+
+.text-detail1 {
+  font-size: 8rem;
+  line-height: 130%;
+  animation-name: textAnim;
+  animation-duration:  5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+}
+
+@keyframes textAnim {
+  0% {color: white;}
+  25% { color: #7735AB;}
+  50% { color: blueviolet}
+  75% { color: rgb(152, 4, 165);}
+  100% {color: palevioletred;}
+}
+
+.exp-container {
+  padding: 20px 120px;
+  display: grid;
+  gap: 60px;
+  position: relative;
+}
+
+.exp-container h1 {
+  font-size: 2rem;
+  line-height: 120%;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.exp-textDestaque {
+  color: #7735AB;
+  font-weight: 600;
+}
+
+
+.exp-list-container {
+  display: grid;
+  gap: 30px;
+}
+
+.containerList-1 {
+  display: grid;
+  grid-template-columns:1.5fr 1fr;
+  gap: 20px;
+}
+
+.containerList-2 {
+  display: grid;
+  grid-template-columns:1.5fr 1fr;
+  gap: 20px;
+}
+
+.containerList-3 {
+  display: grid;
+  grid-template-columns:1.5fr 1fr;
+  gap: 20px;
+}
+
+.list1 {
+  display: grid;
+  gap: 10px;
+  padding-right: 20px;
+}
+
+.list2 {
+  display: grid;
+  height: 90px;
+}
+
+.list-title {
+  font-size: 1.4rem;
+  position: relative;
+}
+
+.list-title2 {
+  font-size: 1.4rem;
+}
+
+.list-title::before {
+  content: " ";
+  display: inline-block;
+  height: 20px;
+  width: 40px;
+  background-image: linear-gradient(to right, #7735AB, black);
+  position: absolute;
+  left: -50px;
+  top: 6px;
+}
+
+.list-p {
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 15px 0px;
+}
+
+.list-p li a {
+  padding: 10px 20px; 
+  background-color: #111;
+}
+
+@media (max-width:1100px) {
+  #experiencia {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-top: 120px;
+    
+  }
+  .text-detail1 {
+    display: none;
+  }
+
+  .exp-container h1::before {
+    content: "Experiência";
+    display: block;
+    position: absolute;
+    top: -35px;
+    text-transform: uppercase;
+    font-weight: 700;
+    animation-name: textAnim;
+    animation-duration:  5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+  }
+}
+
+@media (max-width:800px) {
+  #experiencia {
+    margin: 10 10px;
+  }
+
+  .exp-container {
+    padding: 0px 80px;
+  }
+  .exp-container h1 {
+    font-size: 1.4rem;
+  }
+
+  .exp-list-container {
+    gap: 40px;
+  }
+
+  .containerList-1 {
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 20px;
+  }
+  
+  .containerList-2 {
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 20px;
+  }
+  
+  .containerList-3 {
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width:500px) {
+  .exp-container {
+    padding: 0px 40px;
+  }
+
+  .exp-container h1 {
+    font-size: 1rem;
+  }
+
+  .list-title {
+    font-size: 1.1rem;
+    position: relative;
+  }
+
+  .list-title2 {
+    font-size: 1.1rem;
+  }
+
+  .list-title::before {
+    height: 10px;
+    width: 5px;
+    background-image: linear-gradient(to right, #7735AB, #7735AB);
+    top: 8px;
+    left: -15px;
+  }
+
+  .list-p {
+    font-size: 0.7rem;
+  }
+
+  .exp-list-container {
+    display: grid;
+    gap: 40px;
+  }
+}

@@ -1,0 +1,98 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: 1200px;
+  margin-top: 100px;
+  position: relative;
+}
+
+.main-style {
+  display: grid;
+  gap: 60px;
+  position: relative;
+}
+
+.main-style h1 {
+  font-size: 5.50rem;
+  line-height: 110%;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.main-style h1::before {
+  content: " ";
+  display: block;
+  height: 16px;
+  width: 400px;
+  background-image: linear-gradient( to right, #7735AB, black);
+}
+
+.main-style p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .main-style h1 {
+    font-size: 4rem;
+  }
+
+}
+
+@media (max-width:900px) {
+  .main-style h1 {
+    font-size: 3rem;
+  }
+
+  main img {
+    max-width: 80%;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width:800px) {
+  main img {
+    display: none;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 40px;
+    margin-top: 100px;
+    position: relative;
+  }
+  .main-style h1::before {
+    content: " ";
+    display: block;
+    width: 200px;
+  }
+}
+
+@media (max-width:600px) {
+  .main-style h1 {
+    font-size: 2.6rem;
+    
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    margin: 0 20px;
+    margin-top: 30px;
+  }
+
+  .main-style {
+    gap: 30px;
+  }
+
+  .main-style h1 {
+    font-size: 2rem;
+    
+  }
+
+  .main-style div p {
+    font-size: 1rem;
+  }
+
+}
+
